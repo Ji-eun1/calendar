@@ -1,0 +1,201 @@
+/* ===== 컬러칩 ===== */
+:root{
+    --main-color: #673AB7;
+    --sub-color: #fef9ff;;
+    --black-color:#333;
+}
+
+/* ===== 폰트 ===== */
+.title{
+    margin:0;
+    margin-bottom:30px;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.28px;
+    color:var(--black-color);
+}
+
+.body{
+    margin:0;
+    font-size:14px;
+    line-height: 20px;
+    color:var(--black-color);
+}
+
+/* ===== 바디 ===== */
+body{
+    width:100%;
+    height:100vh;
+    margin:0;
+    background:#f5f0f8;
+    overflow-x: hidden;
+}
+
+/* ===== 공통 스타일 ===== */
+/* 이너 */
+.inner{
+    width:1200px;
+    height:100%;
+    margin:0 auto;
+}
+
+/* 화이트 박스 */
+.white_box{
+    height:100%;
+    background:#fff;
+    border-radius:5px;
+}
+
+.white_box_inner{
+    padding:30px 25px 25px 25px;
+}
+
+/* ===== 헤더 ===== */
+header{
+    width: 100%;
+    height: 90px;
+    margin-bottom:15px;
+    line-height: 9px;
+    background: var(--main-color);
+}
+
+header .inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* 프로필 박스 */
+header .profile_box{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header .profile_box img{
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    object-fit: cover;
+    border:1.5px solid #fff;
+}
+
+header .profile_box .body{
+    color:#fff;
+    font-weight: 500;
+}
+
+/* ========== 메인 ========== */
+/* 그리드 */
+.grid{
+    display: grid;
+    grid-template-columns: 0.25fr 0.75fr;  
+    grid-template-rows: 1fr 1fr; 
+    grid-template-areas:    
+        "profile calendar"
+        "maxim calendar";
+    grid-gap:15px;
+}
+
+/* ===== 프로필 ===== */
+.profile{
+    grid-area: profile;
+    align-self: stretch;
+}
+
+.profile .profile_box{
+    text-align: center;
+}
+
+.profile .profile_box img{
+    width:90px;
+    height:90px;
+    margin-bottom:10px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+/* ===== 격언 ===== */
+.maxim{
+    grid-area: maxim;
+    align-self: stretch;
+}
+
+/* ===== 달력 ===== */
+.calendar{
+    grid-area: calendar;
+}
+
+/* 타이틀 */
+.calendar .title_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+
+.calendar .title_box i{
+    margin-bottom:32px;
+    color:#dbdbdb;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.calendar .title_box i:hover{
+    color:var(--main-color);
+}
+
+/* 표 */
+.calendar table{
+    width:100%;
+}
+
+.calendar table thead{
+    height:45px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    color:var(--main-color);
+    background:var(--sub-color);
+}
+
+.calendar table tr td{
+    border-bottom:1px solid #eee;
+    border-right:1px solid #eee;
+}
+
+.calendar table tr td:first-child{
+    border-left:1px solid #eee;
+}
+
+.calendar table thead tr:first-child td{
+    border-top:1px solid #eee;
+}
+
+.calendar table tbody tr td{
+    position: relative;
+    width:14.285%;
+    height: 65px;
+    padding:11px;
+    text-align: right;
+    vertical-align: top;
+    font-size: 14px;
+    color:var(--black-color);
+}
+
+/* 오늘 */
+.today{
+    position: absolute;
+    top:5px;
+    right:5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    background:var(--main-color);
+    color:#fff;
+}

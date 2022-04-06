@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css 연동 -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- boxicons 연동 -->
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>달력</title>
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <div class="inner">
+            <div class="logo_box">
+                <p>로고</p>
+            </div>
+
+            <div class="profile_box">
+                <img src="img/profile.jpg" alt="profile">
+                <p class="body">닉네임</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="grid inner">
+            <!-- 프로필 -->
+            <div class="profile">
+                <div class="white_box">
+                    <div class="white_box_inner">
+                        <h3 class="title">프로필</h3>
+
+                        <div class="profile_box">
+                            <img src="img/profile.jpg" alt="profile">
+                            <p class="body"><b>닉네임</b></p>
+                            <p class="body">tori@ryanlab.kr</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 격언 -->
+            <div class="maxim">
+                <div class="white_box">
+                    <div class="white_box_inner">
+                        <h3 class="title">오늘의 격언</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 달력 -->
+            <div class="calendar">
+                <div class="white_box">
+                    <div class="white_box_inner">
+                        <div class="title_box">
+                            <i class='bx bxs-chevron-left' onclick="prevCalendar()"></i>
+                            <h3 class="title">
+                                <span class="year"></span>.
+                                <span class="month"></span>.
+                            </h3>
+                            <i class='bx bxs-chevron-right' onclick="nextCalendar()"></i>
+                        </div>
+
+                        <table class="calendar">
+                            <thead>
+                                <tr>
+                                    <td>일요일</td>
+                                    <td>월요일</td>
+                                    <td>화요일</td>
+                                    <td>수요일</td>
+                                    <td>목요일</td>
+                                    <td>금요일</td>
+                                    <td>토요일</td>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
